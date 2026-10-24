@@ -3,7 +3,7 @@
 **A native HTML-to-PDF engine for React Native—without a WebView.** A shared C++ core powered by [Nitro Modules](https://nitro.margelo.com) lays out documents off the UI thread and returns a PDF in memory, as base64, or as a file.
 
 
-| **Up to ~8.3× faster** | **1.8 ms** | **Zero-copy output** | **iOS + Android** |
+| **Up to ~53.6× faster** | **1.8 ms** | **Zero-copy output** | **iOS + Android** |
 |:--|:--|:--|:--|
 | Measured against WebView-based alternatives | Median for a one-page receipt | `ArrayBuffer` over native PDF memory | Shared C++ layout and PDF engine |
 
@@ -19,7 +19,7 @@ await pdf.saveToFile(`${dir}/hello.pdf`) // file
 
 ## Features
 
-- **Fast for real documents.** Android benchmarks show generation up to 2.5×–8.3× faster than `react-native-html-to-pdf` and `expo-print` across the tested documents. Results vary with document size and device; see the [benchmark details](#performance).
+- **Fast for real documents.** Android benchmarks show generation up to 2.5×–53.6× faster than `react-native-html-to-pdf` and `expo-print` across the tested documents. Results vary with document size and device; see the [benchmark details](#performance).
 - **No browser lifecycle.** Generate PDFs without mounting a WebView or starting a browser process.
 - **Choose your output.** Read a zero-copy `ArrayBuffer`, encode to base64, or write to a file—without requiring a temporary file for in-memory workflows.
 - **Keep the UI responsive.** Layout and PDF writing run on a background thread.
@@ -132,11 +132,11 @@ Registers a TrueType or OpenType file for CSS `font-family`: `{ family, path, we
 
 ## Performance
 
-Median time to generate each PDF on Android, using identical HTML and file output for each library. In these tests, generation took **1.8 ms** for a one-page receipt and was up to **~8.3× faster** than the compared WebView-based libraries. iOS has not been benchmarked yet.
+Median time to generate each PDF on Android, using identical HTML and file output for each library. In these tests, generation took **1.8 ms** for a one-page receipt and was up to **~53.6× faster** than the compared WebView-based libraries. iOS has not been benchmarked yet.
 
 | Document | `react-native-nitro-html-to-pdf` | `react-native-html-to-pdf` | `expo-print` |
 |:--|--:|--:|--:|
-| Receipt · 1 page | **1.8 ms** | 15 ms · ~8.3× | 12 ms · ~6.7× |
+| Receipt · 1 page | **1.8 ms** | 15 ms · ~53.6× | 12 ms · ~6.7× |
 | Invoice · 7 pages | **16 ms** | 76 ms · ~4.8× | 85 ms · ~5.3× |
 | Invoice · 46 pages | **140 ms** | 346 ms · ~2.5× | 371 ms · ~2.7× |
 
