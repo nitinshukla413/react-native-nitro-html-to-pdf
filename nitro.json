@@ -1,0 +1,20 @@
+{
+  "$schema": "https://nitro.margelo.com/nitro.schema.json",
+  "cxxNamespace": ["nitropdf"],
+  "ios": {
+    "iosModuleName": "NitroPdf"
+  },
+  "android": {
+    "androidNamespace": ["nitropdf"],
+    "androidCxxLibName": "NitroPdf"
+  },
+  "autolinking": {
+    "NitroPdf": {
+      "all": {
+        "language": "c++",
+        "implementationClassName": "HybridNitroPdf"
+      }
+    }
+  },
+  "ignorePaths": ["**/node_modules"]
+}

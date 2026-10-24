@@ -1,0 +1,126 @@
+{
+  "name": "react-native-nitro-html-to-pdf",
+  "version": "0.1.0",
+  "description": "Fast HTML to PDF for React Native, without a WebView. A C++ engine built on Nitro Modules.",
+  "main": "./lib/commonjs/index.js",
+  "module": "./lib/module/index.js",
+  "types": "./lib/typescript/src/index.d.ts",
+  "react-native": "src/index",
+  "source": "src/index",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "clean": "git clean -dfX",
+    "release": "semantic-release",
+    "build": "npm run typecheck && bob build",
+    "codegen": "nitrogen --logLevel=\"debug\" && npm run build"
+  },
+  "keywords": [
+    "react-native",
+    "pdf",
+    "html-to-pdf",
+    "pdf-generator",
+    "nitro",
+    "nitro-modules"
+  ],
+  "files": [
+    "src",
+    "lib",
+    "nitrogen",
+    "cpp/*.cpp",
+    "cpp/*.hpp",
+    "cpp/core",
+    "cpp/third_party/litehtml/LICENSE",
+    "cpp/third_party/litehtml/include",
+    "cpp/third_party/litehtml/src/**/*.{c,cpp,h}",
+    "cpp/third_party/litehtml/src/gumbo/LICENSE",
+    "cpp/third_party/stb/LICENSE",
+    "cpp/third_party/stb/stb_image.h",
+    "nitro.json",
+    "android/build.gradle",
+    "android/fix-prefab.gradle",
+    "android/gradle.properties",
+    "android/CMakeLists.txt",
+    "android/src",
+    "ios/**/*.mm",
+    "*.podspec",
+    "README.md"
+  ],
+  "workspaces": [
+    "example"
+  ],
+  "repository": "https://github.com/nitinshukla/react-native-nitro-html-to-pdf.git",
+  "author": "Nitin Shukla",
+  "license": "MIT",
+  "bugs": "https://github.com/nitinshukla/react-native-nitro-html-to-pdf/issues",
+  "homepage": "https://github.com/nitinshukla/react-native-nitro-html-to-pdf#readme",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@types/react": "19.2.0",
+    "conventional-changelog-conventionalcommits": "^10.2.1",
+    "nitrogen": "0.37.1",
+    "react": "19.2.3",
+    "react-native": "0.86.0",
+    "react-native-builder-bob": "^0.40.18",
+    "react-native-nitro-modules": "0.37.1",
+    "semantic-release": "^25.0.7",
+    "typescript": "^6.0.3"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "react-native-nitro-modules": "*"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@react-native",
+      "prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "warn",
+        {
+          "quoteProps": "consistent",
+          "singleQuote": true,
+          "tabWidth": 2,
+          "trailingComma": "es5",
+          "useTabs": false
+        }
+      ]
+    }
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/"
+  ],
+  "prettier": {
+    "quoteProps": "consistent",
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "useTabs": false,
+    "semi": false
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      [
+        "typescript",
+        {
+          "project": "tsconfig.json"
+        }
+      ]
+    ]
+  }
+}
