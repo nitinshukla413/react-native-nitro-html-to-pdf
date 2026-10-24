@@ -4,7 +4,7 @@ Fast HTML to PDF for React Native, without a WebView. Pages are laid out and wri
 
 [![Version](https://img.shields.io/npm/v/react-native-nitro-html-to-pdf.svg)](https://www.npmjs.com/package/react-native-nitro-html-to-pdf)
 [![Downloads](https://img.shields.io/npm/dm/react-native-nitro-html-to-pdf.svg)](https://www.npmjs.com/package/react-native-nitro-html-to-pdf)
-[![License](https://img.shields.io/npm/l/react-native-nitro-html-to-pdf.svg)](https://github.com/nitinshukla/react-native-nitro-html-to-pdf/blob/main/LICENSE)
+[![License](https://img.shields.io/npm/l/react-native-nitro-html-to-pdf.svg)](https://github.com/nitinshukla413/react-native-nitro-html-to-pdf/blob/main/LICENSE)
 
 ```ts
 import { NitroPdf } from 'react-native-nitro-html-to-pdf'
@@ -171,7 +171,7 @@ litehtml lays out the document once at the page width. Drawing commands are reco
 ## Example app
 
 ```sh
-git clone --recursive https://github.com/nitinshukla/react-native-nitro-html-to-pdf.git
+git clone --recursive https://github.com/nitinshukla413/react-native-nitro-html-to-pdf.git
 cd react-native-nitro-html-to-pdf && npm install
 cd example && npm run android # or: npm run ios
 ```

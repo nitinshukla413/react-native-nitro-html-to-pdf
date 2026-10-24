@@ -48,11 +48,11 @@
   "workspaces": [
     "example"
   ],
-  "repository": "https://github.com/nitinshukla/react-native-nitro-html-to-pdf.git",
+  "repository": "https://github.com/nitinshukla413/react-native-nitro-html-to-pdf.git",
   "author": "Nitin Shukla",
   "license": "MIT",
-  "bugs": "https://github.com/nitinshukla/react-native-nitro-html-to-pdf/issues",
-  "homepage": "https://github.com/nitinshukla/react-native-nitro-html-to-pdf#readme",
+  "bugs": "https://github.com/nitinshukla413/react-native-nitro-html-to-pdf/issues",
+  "homepage": "https://github.com/nitinshukla413/react-native-nitro-html-to-pdf#readme",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
