@@ -2,9 +2,6 @@
 
 Fast HTML to PDF for React Native, without a WebView. Pages are laid out and written in C++ on a background thread with [Nitro Modules](https://nitro.margelo.com).
 
-[![Version](https://img.shields.io/npm/v/react-native-nitro-html-to-pdf.svg)](https://www.npmjs.com/package/react-native-nitro-html-to-pdf)
-[![Downloads](https://img.shields.io/npm/dm/react-native-nitro-html-to-pdf.svg)](https://www.npmjs.com/package/react-native-nitro-html-to-pdf)
-[![License](https://img.shields.io/npm/l/react-native-nitro-html-to-pdf.svg)](https://github.com/nitinshukla413/react-native-nitro-html-to-pdf/blob/main/LICENSE)
 
 ```ts
 import { NitroPdf } from 'react-native-nitro-html-to-pdf'
